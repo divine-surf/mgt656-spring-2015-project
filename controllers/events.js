@@ -78,7 +78,8 @@ function saveEvent(request, response){
     contextData.errors.push('Your location should be between 5 and 100 letters.');
   }
   
-  if (validator.isURL(request.body.image['http','https',(/\.(png|gif)$/)])=== false) {
+  if (validator.isURL(request.body.image) === false ||
+      validator.matches(request.body.image,(/\.(png|gif)$/)) === false) {
     contextData.errors.push('The image URL must begin with ‘http://’ or ‘https://’ and end with ‘.gif’ or ‘.png’');
   }
   
@@ -89,6 +90,7 @@ function saveEvent(request, response){
 
   if (contextData.errors.length === 0) {
     var newEvent = {
+      id: 6,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
@@ -96,7 +98,7 @@ function saveEvent(request, response){
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect(302, '/events/'+ newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
@@ -124,7 +126,6 @@ function rsvp (request, response){
     contextData.errors.push('Invalid email');
     response.render('event-detail.html', contextData);    
   }
-
 }
 
 /**
