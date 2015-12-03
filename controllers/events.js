@@ -90,7 +90,7 @@ function saveEvent(request, response){
 
   if (contextData.errors.length === 0) {
     var newEvent = {
-      id: 6,
+      id: events.all.length + 1,
       title: request.body.title,
       location: request.body.location,
       image: request.body.image,
