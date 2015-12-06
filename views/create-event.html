@@ -2,17 +2,6 @@
 
 {% block mainContent %}
 
-  {% if errors %}
-    <div class="form-errors">
-      <p>Please correct the following errors!</p>
-      <ul>
-        {% for error in errors %}
-          <li>{{error}}</li>
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
-
     <header class="introcreate-event">
         <div class="create-event-body">
             <div class="container">
@@ -29,7 +18,19 @@
       <section id="events" class="container content-section text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-              <form id="create-event" method="POST">
+              
+              {% if errors %}
+                <div>
+                  <p>Please correct the following errors!</p>
+                  <ul class="form-errors">
+                    {% for error in errors %}
+                      <li>{{error}}</li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+              
+              <form method="POST">
                 
                 <label for="title">Event title:</label>
                 <input type="text" name="title">
