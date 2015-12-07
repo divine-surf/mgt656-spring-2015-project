@@ -1,0 +1,27 @@
+#event-spacer1 {
+    width: 100%;
+    padding: 50px 0;
+    background: url(https://c1.staticflickr.com/3/2725/4030910412_462ffb7823_b.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#event-detail {
+    width: 100%;
+    padding: 50px 0;
+    color: black;
+    background: white;
+    background-size: contain;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.event-detail-list ul {
+    list-style-type: none;
+}

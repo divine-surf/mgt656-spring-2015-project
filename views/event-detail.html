@@ -1,16 +1,34 @@
 {% extends "layout.html" %}
 
 {% block mainContent %}
-<header></header>
-<h1 id='title'>{{event.title}}</h1>
-<p>When: <span id='date'>{{event.date}}</span></p>
-<p>Where: <span id='location'>{{event.location}}</span></p>
-<p>Who:</p>
-<ul id='attendees'>
-    {% for person in event.attending %}
-    <li>{{person}}</li>
-    {% endfor %}
-</ul>
-<img src = "{{event.image}}" id='image'></img>
-<p>Ride on!</p>
+    <header></header>
+    <!-- Spacer Section 1 -->
+    <section id="event-spacer1" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+            </div>
+        </div>
+    </section>
+    
+    <!--  Event Detail Section -->
+    <section id="event-detail" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="event-detail-list">
+                    <h1 id='title'>{{event.title}}</h1>
+                    <p>When: <span id='date'>{{event.date}}</span></p>
+                    <p>Where: <span id='location'>{{event.location}}</span></p>
+                    <p>Who:</p>
+                    <ul id='attendees'>
+                        {% for person in event.attending %}
+                        <li>{{person}}</li>
+                        {% endfor %}
+                    </ul>
+                    <img src = "{{event.image}}" id='image'></img>
+                    <p>Ride on!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
