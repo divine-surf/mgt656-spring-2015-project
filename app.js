@@ -8,7 +8,9 @@ var configure = require('./config.js');
 var indexControllers = require('./controllers/index.js');
 var aboutControllers = require('./controllers/about.js');
 var eventControllers = require('./controllers/events.js');
-
+var sprintreportsControllers = require('./controllers/sprintreports.js');
+var sprint1Controllers = require('./controllers/sprint1.js');
+var donationControllers = require('./controllers/donation.js')
 
 // Create our express app
 var app = express();
@@ -19,8 +21,12 @@ configure(app);
 // Add routes mapping URLs to controllers
 app.get('/', indexControllers.index);
 app.get('/about', aboutControllers.about);
+app.get('/sprintreports', sprintreportsControllers.sprintreports);
+app.get('/sprint1', sprint1Controllers.sprint1);
+app.get('/donation', donationControllers.donation);
 app.get('/events', eventControllers.listEvents);
 app.get('/events/new', eventControllers.newEvent);
+app.get('/api/events', eventControllers.api);
 app.post('/events/new', eventControllers.saveEvent);
 app.get('/events/:id([0-9]+)', eventControllers.eventDetail);
 

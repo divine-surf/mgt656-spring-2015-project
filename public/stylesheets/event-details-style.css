@@ -1,0 +1,51 @@
+#event-spacer1 {
+    width: 100%;
+    padding: 50px 0;
+    background: url(https://c1.staticflickr.com/3/2725/4030910412_462ffb7823_b.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+#event-detail {
+    width: 100%;
+    padding: 50px 0;
+    color: black;
+    background: white;
+    background-size: contain;
+    background-color: #fff;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.event-detail-list ul {
+    list-style-type: none;
+}
+
+#donation {
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+#donation {
+    border: 1px solid #42dca3;
+    color: #42dca3;
+    background-color: transparent;
+}
+
+#donation:hover,
+#donation:focus {
+    border: 1px solid #42dca3;
+    outline: 0;
+    color: #000;
+    background-color: #42dca3;
+}
