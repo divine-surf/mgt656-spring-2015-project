@@ -42,3 +42,14 @@
         font-size: 26px;
     }
 }
+
+#sprintreport6 {
+    width: 100%;
+    height: auto;
+    padding: 100px;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+}
