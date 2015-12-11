@@ -26,6 +26,24 @@
                     </ul>
                     <img src = "{{event.image}}" id='image'></img>
                     <p>Ride on!</p>
+                    <p> </p>
+                    {% if errors %}
+                    <div>
+                        <ul class="form-errors">
+                            {% for error in errors %}
+                                <li>{{error}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                    <div id="rsvp">
+                        <p id="rsvp-instructions">Hey creature, enter your email below to RSVP for this event.</p>
+                        <form id="rsvp-form" method="POST">
+                            <input type="text" name="email" id="email" placeholder="Your email"/>
+                            <input type="submit" value="Submit"/>
+                        </form>
+                    </div>
+                    <p> </p>
                     <a href="/donation" class="donation" id="donation"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Feel free to donate</span></a>
                 </div>
             </div>
