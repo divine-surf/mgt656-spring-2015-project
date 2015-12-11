@@ -88,3 +88,28 @@
         padding: 0;
     }
 }
+
+#nick-headshot {
+    position: center;
+    width: 300px;
+    height: auto;
+}
+
+#iggy-headshot {
+    position: center;
+    width: 300px;
+    height: auto;
+}
+
+#tiffany-headshot {
+    position: center;
+    width: 500px;
+    height: auto;
+}
+
+#ming-headshot {
+    position: center;
+    width: 500px;
+    height: auto;
+}
+
